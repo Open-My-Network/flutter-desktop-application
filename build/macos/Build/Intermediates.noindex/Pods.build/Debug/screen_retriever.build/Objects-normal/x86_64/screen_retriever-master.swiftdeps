@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "616314d463d90efb352cb1a993d5cdae309bcd263a1752cdeb55603fd91e3ff5"
+build_start_time: [1704357767, 921676000]
+build_end_time: [1704357768, 204784000]
+inputs:
+  "/Users/gravity/.pub-cache/hosted/pub.dev/screen_retriever-0.1.9/macos/Classes/ScreenRetrieverPlugin.swift": [1697072124, 248101742]

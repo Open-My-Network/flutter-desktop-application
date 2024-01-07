@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
+options: "44ddf407d13e778aace9cb5d22e7775d04c585ee92449d3cdc0c3e03b18a80fd"
+build_start_time: [1697072103, 702553000]
+build_end_time: [1697072104, 298392000]
+inputs:
+  "/Users/gravity/Documents/open_my_network_app/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1697072094, 838321553]
+  "/Users/gravity/Documents/open_my_network_app/macos/Runner/AppDelegate.swift": !private [1674535942, 0]
+  "/Users/gravity/Documents/open_my_network_app/macos/Runner/MainFlutterWindow.swift": !private [1686019972, 651498305]
