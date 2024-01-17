@@ -6,6 +6,7 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final String Function(String?) onValidate;
   final IconData prefixIconData;
+  final Color? iconColor;
   final bool? isObscure;
   const CustomTextField({
     super.key,
@@ -15,6 +16,7 @@ class CustomTextField extends StatelessWidget {
     required this.onValidate,
     required this.prefixIconData,
     this.isObscure,
+    this.iconColor,
   });
 
   @override
@@ -27,7 +29,7 @@ class CustomTextField extends StatelessWidget {
         labelText: labelText,
         hintText: hintText,
         border: const OutlineInputBorder(),
-        prefixIcon: Icon(prefixIconData),
+        prefixIcon: Icon(prefixIconData,color: iconColor??Color.fromARGB(255, 0, 76, 232),),
       ),
     );
   }

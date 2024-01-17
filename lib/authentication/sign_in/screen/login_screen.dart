@@ -32,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.45,
                   child: const DecoratedBox(
                       decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(12),
                       bottomRight: Radius.circular(12),
                     ),

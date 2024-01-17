@@ -21,3 +21,5 @@ class SignInUserEvent extends SignInEvent {
 }
 
 class SignInUserLogout extends SignInEvent {}
+
+class SignUpEvent extends SignInEvent {}
