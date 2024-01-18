@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
-import '../utils/list_of_category.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:open_my_network_app/post/bloc_category/category_bloc.dart';
+import 'package:open_my_network_app/post/model/category_model.dart';
 
 class PostCategoryWidget extends StatelessWidget {
   const PostCategoryWidget({super.key});
@@ -31,24 +32,48 @@ class PostCategoryWidget extends StatelessWidget {
               ),
             ),
           ),
+          
           SizedBox(
             height: 200,
-            child: ListView.builder(
+            child: BlocConsumer<CategoryBloc, CategoryState>(
+              listener: (context, state) {
+                // TODO: implement listener
+              },
+              builder: (context, state) {
+                if (state is CategoryInitial) {
+                  BlocProvider.of<CategoryBloc>(context).add(ListCategoryItems());
+                  return SizedBox.shrink();
+                }
+                // if ( state is CategoryLoading && state.isLoading == true ){
+                //   return CircularProgressIndicator();
+                // } 
+                if (state is CategoryError) {
+                  return Text(state.strError);
+                }
+                if (state is CategorySuccess){
+                  final List<CategoryModel> data = state.categoryModel;
+                  return   ListView.builder(
               physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
+                debugPrint(data[index].name.toString());
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SelectableText(
-                    categoryList[index],
+                    // data[index]["name"].toString(),
+                    data[index].name.toString(),
                     style: const TextStyle(
                       fontSize: 16.0,
                     ),
                   ),
                 );
               },
-              itemCount: categoryList.length,
+              itemCount: data.length,
+            );
+                }
+                return Container();
+              },
             ),
-          ),
+          )
         ],
       ),
     );

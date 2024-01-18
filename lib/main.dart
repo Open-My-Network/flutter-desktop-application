@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:open_my_network_app/authentication/sign_up/bloc/sign_up_bloc.dart';
+import 'package:open_my_network_app/post/bloc_category/category_bloc.dart';
 // import 'package:window_manager/window_manager.dart';
 
 import 'app/screens/my_app.dart';
@@ -40,6 +41,9 @@ void main() async {
         ),
         BlocProvider(
           create: (_) => SignUpBloc(),
+        ),
+        BlocProvider(
+          create: (_) => CategoryBloc(),
         )
       ],
       child: const MyApp(),

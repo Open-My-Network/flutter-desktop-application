@@ -15,11 +15,11 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
       final String password = event.password;
 
       emit(const SignInProgress(isLoading: true));
-      final bool userStatue = await signInService.loginUser(username, password);
+      final bool userStatus = await signInService.loginUser(username, password);
       await currentUserStatus();
 
       emit(const SignInProgress(isLoading: false));
-      emit(SignInSuccess(isSuccess: userStatue));
+      emit(SignInSuccess(isSuccess: userStatus));
     });
 
     on<SignInUserLogout>((event, emit) async {
