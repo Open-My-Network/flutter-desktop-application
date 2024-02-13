@@ -32,43 +32,41 @@ class PostCategoryWidget extends StatelessWidget {
               ),
             ),
           ),
-          
           SizedBox(
             height: 200,
             child: BlocConsumer<CategoryBloc, CategoryState>(
-              listener: (context, state) {
-                // TODO: implement listener
-              },
+              listener: (context, state) {},
               builder: (context, state) {
                 if (state is CategoryInitial) {
-                  BlocProvider.of<CategoryBloc>(context).add(ListCategoryItems());
-                  return SizedBox.shrink();
+                  BlocProvider.of<CategoryBloc>(context)
+                      .add(ListCategoryItems());
+                  return const SizedBox.shrink();
                 }
                 // if ( state is CategoryLoading && state.isLoading == true ){
                 //   return CircularProgressIndicator();
-                // } 
+                // }
                 if (state is CategoryError) {
                   return Text(state.strError);
                 }
-                if (state is CategorySuccess){
+                if (state is CategorySuccess) {
                   final List<CategoryModel> data = state.categoryModel;
-                  return   ListView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) {
-                debugPrint(data[index].name.toString());
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SelectableText(
-                    // data[index]["name"].toString(),
-                    data[index].name.toString(),
-                    style: const TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
-                );
-              },
-              itemCount: data.length,
-            );
+                  return ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) {
+                      debugPrint(data[index].name.toString());
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: SelectableText(
+                          // data[index]["name"].toString(),
+                          data[index].name.toString(),
+                          style: const TextStyle(
+                            fontSize: 16.0,
+                          ),
+                        ),
+                      );
+                    },
+                    itemCount: data.length,
+                  );
                 }
                 return Container();
               },

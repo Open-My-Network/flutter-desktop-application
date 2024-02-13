@@ -4,7 +4,7 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final String labelText;
   final String hintText;
-  final String Function(String?) onValidate;
+  final String? Function(String?)? onValidate;
   final IconData prefixIconData;
   final Color? iconColor;
   final bool? isObscure;
@@ -29,7 +29,10 @@ class CustomTextField extends StatelessWidget {
         labelText: labelText,
         hintText: hintText,
         border: const OutlineInputBorder(),
-        prefixIcon: Icon(prefixIconData,color: iconColor??Color.fromARGB(255, 0, 76, 232),),
+        prefixIcon: Icon(
+          prefixIconData,
+          color: iconColor ?? const Color.fromARGB(255, 0, 76, 232),
+        ),
       ),
     );
   }

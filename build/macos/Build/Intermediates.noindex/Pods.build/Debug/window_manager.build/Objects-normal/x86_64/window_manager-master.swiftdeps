@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
-options: "f5120739d37d1dc9c945782c8a39685ff218741a96f0661f76bb2e72b5b24749"
-build_start_time: [1704357767, 921718000]
-build_end_time: [1704357768, 240826000]
+options: "7c1017a915cf3c1ce4ac727a3f70449839e71cafcde1632808e9fc65fae89b21"
+build_start_time: [1706887238, 680437000]
+build_end_time: [1706887260, 9945000]
 inputs:
   "/Users/gravity/.pub-cache/hosted/pub.dev/window_manager-0.3.7/macos/Classes/WindowManager.swift": [1697072123, 593960901]
   "/Users/gravity/.pub-cache/hosted/pub.dev/window_manager-0.3.7/macos/Classes/WindowManagerPlugin.swift": [1697072123, 591996548]

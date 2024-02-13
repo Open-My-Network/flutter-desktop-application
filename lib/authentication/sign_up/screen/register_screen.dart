@@ -64,7 +64,7 @@ class RegisterScreen extends StatelessWidget {
                   child: SizedBox(
                     height: 40,
                     width: MediaQuery.of(context).size.width * .7,
-                    child: AppText(
+                    child: const AppText(
                       isSelectableText: false,
                       strText:
                           "Please register your account by entering your username email address here.",
@@ -86,7 +86,7 @@ class RegisterScreen extends StatelessWidget {
                             if (value!.isEmpty) {
                               return "Username is required";
                             }
-                            return "";
+                            return null;
                           },
                           prefixIconData: Icons.person,
                         ),
@@ -99,7 +99,7 @@ class RegisterScreen extends StatelessWidget {
                             if (value!.isEmpty) {
                               return "email address is required";
                             }
-                            return "";
+                            return null;
                           },
                           prefixIconData: Icons.mail,
                         ),
@@ -113,7 +113,7 @@ class RegisterScreen extends StatelessWidget {
                             if (value!.isEmpty) {
                               return "password is required";
                             }
-                            return "";
+                            return null;
                           },
                           prefixIconData: Icons.security,
                         ),
@@ -131,44 +131,44 @@ class RegisterScreen extends StatelessWidget {
                                 40), //////// HERE
                           ),
                           onPressed: () {
-                            BlocProvider.of<SignUpBloc>(context).add(
-                              SignUpUserEvent(
-                                username: username.text,
-                                password: password.text,
-                                email: email.text,
-                              ),
-                            );
+                            if (formKey.currentState!.validate()) {
+                              BlocProvider.of<SignUpBloc>(context).add(
+                                SignUpUserEvent(
+                                  username: username.text,
+                                  password: password.text,
+                                  email: email.text,
+                                ),
+                              );
+                            }
                           },
-                          child: Text('REGISTER'),
+                          child: const Text('REGISTER'),
                         ),
                         // const Gap(10 * 2),
                       ],
                     ),
                   ),
                 ),
-                 Padding(
-                   padding: const EdgeInsets.only(left:40.0,bottom:36),
-                   child: RichText(
-                            text: TextSpan(children: [
-                              const TextSpan(
-                                text: "Already have an account?",
-                                style: TextStyle(color: Colors.black),
-                              ),
-                              const WidgetSpan(child: SizedBox(width: 5)),
-                              TextSpan(
-                                  text: "Login",
-                                  style: const TextStyle(
-                                      color: Color.fromARGB(255, 0, 76, 232)),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      Navigator.of(context).push(
-                                          MaterialPageRoute(
-                                              builder: (context) =>
-                                                  LoginScreen()));
-                                    }),
-                            ]),
-                          ),
-                 ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 40.0, bottom: 36),
+                  child: RichText(
+                    text: TextSpan(children: [
+                      const TextSpan(
+                        text: "Already have an account?",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      const WidgetSpan(child: SizedBox(width: 5)),
+                      TextSpan(
+                          text: "Login",
+                          style: const TextStyle(
+                              color: Color.fromARGB(255, 0, 76, 232)),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => const LoginScreen()));
+                            }),
+                    ]),
+                  ),
+                ),
               ],
             );
           },

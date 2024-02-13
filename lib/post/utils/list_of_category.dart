@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 final List<String> categoryList = [
   "Technology",
   "Article",
@@ -22,8 +20,6 @@ final List<String> categoryList = [
 //     return "data";
 //   });
 // }
-
-
 
 final List<String> tagList = [
   "weekly-top",

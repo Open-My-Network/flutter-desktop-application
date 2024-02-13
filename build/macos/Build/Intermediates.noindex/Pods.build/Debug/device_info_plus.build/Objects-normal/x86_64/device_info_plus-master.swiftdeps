@@ -1,7 +1,7 @@
 version: "Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)"
-options: "72324d6f4d87f1d2535c1d8e700dd70b5bdfca8f61eb636632bb698cb6f9d819"
-build_start_time: [1704357767, 921654000]
-build_end_time: [1704357768, 200332000]
+options: "01bdf63edea0404bf5d4cf9a38ef6e2899a5820ca0651a9b9777035e784002d2"
+build_start_time: [1706887239, 513549000]
+build_end_time: [1706887260, 242671000]
 inputs:
   "/Users/gravity/.pub-cache/hosted/pub.dev/device_info_plus-9.1.0/macos/Classes/CwlSysctl.swift": [1700285455, 71633758]
   "/Users/gravity/.pub-cache/hosted/pub.dev/device_info_plus-9.1.0/macos/Classes/DeviceInfoPlusMacosPlugin.swift": [1700285455, 74251380]

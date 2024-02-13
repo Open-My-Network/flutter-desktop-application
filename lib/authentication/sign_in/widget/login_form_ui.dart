@@ -55,15 +55,13 @@ class LoginFormUI extends StatelessWidget {
             const Gap(10 * 2),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            backgroundColor:
-                                const Color.fromARGB(255, 0, 76, 232),
-                            shadowColor: Colors.greenAccent,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(32.0)),
-                            minimumSize: Size(
-                                MediaQuery.of(context).size.width * 1,
-                                40),), //////// HERE
+                foregroundColor: Colors.white,
+                backgroundColor: const Color.fromARGB(255, 0, 76, 232),
+                shadowColor: Colors.greenAccent,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(32.0)),
+                minimumSize: Size(MediaQuery.of(context).size.width * 1, 40),
+              ), //////// HERE
               onPressed: () {
                 BlocProvider.of<SignInBloc>(context).add(
                   SignInUserEvent(
@@ -83,14 +81,15 @@ class LoginFormUI extends StatelessWidget {
                   text: "Do not have an account?",
                   style: TextStyle(color: Colors.black),
                 ),
-                WidgetSpan(child: SizedBox(width: 5)),
+                const WidgetSpan(child: SizedBox(width: 5)),
                 TextSpan(
                     text: "Register",
-                    style: TextStyle(color:Color.fromARGB(255, 0, 76, 232)),
+                    style:
+                        const TextStyle(color: Color.fromARGB(255, 0, 76, 232)),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) =>  RegisterScreen()));
+                            builder: (context) => const RegisterScreen()));
                       }),
               ]),
             ),

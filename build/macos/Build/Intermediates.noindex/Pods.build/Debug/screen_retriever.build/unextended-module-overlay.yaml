@@ -4,20 +4,20 @@
   'case-sensitive': 'false',
   'roots': [{
     'type': 'directory',
-    'name': "/Users/gravity/Documents/open_my_network_app/build/macos/Build/Products/Debug/screen_retriever/screen_retriever.framework/Modules"
+    'name': "/Users/gravity/Documents/flutter-desktop-application/build/macos/Build/Products/Debug/screen_retriever/screen_retriever.framework/Modules"
     'contents': [{
       'type': 'file',
       'name': "module.modulemap",
-      'external-contents': "/Users/gravity/Documents/open_my_network_app/build/macos/Build/Intermediates.noindex/Pods.build/Debug/screen_retriever.build/unextended-module.modulemap",
+      'external-contents': "/Users/gravity/Documents/flutter-desktop-application/build/macos/Build/Intermediates.noindex/Pods.build/Debug/screen_retriever.build/unextended-module.modulemap",
     }]
     },
     {
     'type': 'directory',
-    'name': "/Users/gravity/Documents/open_my_network_app/build/macos/Build/Products/Debug/screen_retriever/screen_retriever.framework/Headers"
+    'name': "/Users/gravity/Documents/flutter-desktop-application/build/macos/Build/Products/Debug/screen_retriever/screen_retriever.framework/Headers"
     'contents': [{
       'type': 'file',
       'name': "screen_retriever-Swift.h",
-      'external-contents': "/Users/gravity/Documents/open_my_network_app/build/macos/Build/Intermediates.noindex/Pods.build/Debug/screen_retriever.build/unextended-interface-header.h",
+      'external-contents': "/Users/gravity/Documents/flutter-desktop-application/build/macos/Build/Intermediates.noindex/Pods.build/Debug/screen_retriever.build/unextended-interface-header.h",
     }]
     }]
 }

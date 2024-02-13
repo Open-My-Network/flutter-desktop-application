@@ -47,6 +47,7 @@ dependencies:
   device_info_plus: ^9.1.0
   gap: ^3.0.1
   shared_preferences: ^2.2.2
+  sqflite:
 
 dev_dependencies:
   flutter_test:
